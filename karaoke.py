@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import json
 import urllib
+import json
 from smallsmilhandler import SmallSMILHandler
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
