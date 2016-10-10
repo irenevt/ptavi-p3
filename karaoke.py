@@ -5,6 +5,7 @@ import sys
 from smallsmilhandler import SmallSMILHandler
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
+import json
 
 
 def abrirFichero():
@@ -34,6 +35,11 @@ def imprimirEtiquetas(listaEtiquetas):
             linea = linea + '\t' + clave + ' = ' + '"' + valor + '"'
         linea = linea + '\n'
     print (linea)
+
+def json(listaJson):
+    with open('karaoke.json', 'w') as fichero_json:
+        json.dump(listaJson, fichero_json, sort_keys=True, indent=4, separators=(' ', ': '))
+
    
 if __name__ == '__main__':
     fichero = abrirFichero()
