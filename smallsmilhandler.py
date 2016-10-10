@@ -23,7 +23,7 @@ class SmallSMILHandler(ContentHandler):
             dicname = {name: dicionarioAlmacenado}
             self.listaEtiquetas.append(dicname)
 
-    def listaEtiquetas(self):
+    def guardadoEtiquetas(self):
         
         return self.listaEtiquetas
 
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     cHandler = SmallSMILHandler()
     parser.setContentHandler(cHandler)
     parser.parse(open('karaoke.smil'))
-    print (cHandler.listaEtiquetas())
+    print (cHandler.guardadoEtiquetas())
 
 
 
